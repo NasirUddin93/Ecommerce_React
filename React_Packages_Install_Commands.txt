@@ -14,12 +14,3 @@ npm i react-player
 npm install react-bootstrap bootstrap
 
 
-
-
-Video Tutorial link:
-https://www.youtube.com/watch?v=TMNz9W1BzPs
-
-
-
-Frontend git link
-https://github.com/phptechlife/lms-frontend.git
