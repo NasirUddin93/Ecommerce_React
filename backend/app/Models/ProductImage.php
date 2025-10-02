@@ -7,18 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductImage extends Model
 {
-    use HasFactory;
-
-    protected $fillable = [
-        'product_id',
-        'image',
-    ];
-
-    /**
-     * Each image belongs to a product
-     */
-    public function product()
-    {
-        return $this->belongsTo(Product::class, 'product_id', 'id');
+    protected $appends = ['image_url'];
+    public function getImageUrlAttribute(){
+        if($this->image == ""){
+            return "";
+        }
+        return asset('/uploads/products/small/'.$this->image);
     }
+
 }
